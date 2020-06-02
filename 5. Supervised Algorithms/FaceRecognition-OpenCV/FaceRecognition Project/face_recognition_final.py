@@ -4,7 +4,7 @@ import os
 import knn as myKNN
 
 
-#First Collect the data of all faces
+#First Collect the data of all faces , on which KNN will be applied so that it can be detected the face in the fram belongs to which class(Here each class has the name of the person)
 ############################################################
 
 ##Face data will contain each image in the form of numpy array and label will contain the class_id to which that image belongs to

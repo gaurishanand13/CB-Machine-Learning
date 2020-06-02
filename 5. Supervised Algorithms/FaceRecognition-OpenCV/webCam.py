@@ -20,7 +20,8 @@ while True:
     #cam.read() returns 2 values. First one Tells us whether the cam was successful in capturing the frame or not.
     #If the cam was not successful in capturing that frame , then returnValue will be returned False
     returnValue,Frame = cam.read() #2nd values is the returned Frame which is captured by the cam
-    #Apart from this, let's show the webcam in black and white too.
+    
+    #Apart from this coloured Webcam, let's show the webcam in black and white too.
     grayFrame = cv2.cvtColor(Frame,cv2.COLOR_BGR2GRAY)
     
     if returnValue==False:

@@ -1,10 +1,11 @@
 import cv2
 
-#Actually for now, what we will be just doing is drawing a rectangle accross all the faces which comes in the webcam. So we need a classifier which could classify and detect
-#all the faces in each frame of the video of web cam
+#Actually for now, what we will be just doing is drawing a rectangle accross all the faces which comes in the webcam. So we need a classifier which could classify and detect All the faces in each frame of the video of web cam
+
+
 
 cam = cv2.VideoCapture(0) 
-face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_alt.xml')#Created an object of haarcascade Classifier which helps in detection of the face in the image/Frame
+face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_alt.xml')#Created an object of haarcascade Classifier which helps in detection of the face in the image(Frame)
 
 
 while True:
@@ -45,6 +46,20 @@ while True:
 
 cam.release() 
 cv2.destroyAllWindows()
+
+
+"""
+Scale Factor - Parameters specifying how much the image size is reduced at each image scale. Eg- 1.3 which means you reduce size by 30%. It basically reduces the size of each pixel of the image by some percentage. Reducing the pixel size is very necessary for our algos to detect the face properly so larger the Scale Factor, lesser will be the size of each pixel. More accurately our model will be able to work on it.(Scale Factor basically recises the image).
+
+
+Min Neighbours - Parameters specifying how many neighbours each candidate rectangle should have to retain it. This parameter will affect the quality of the detected faces. Higher value results in less detections but with higher quality.
+"""
+
+
+
+
+
+
 
 
 
